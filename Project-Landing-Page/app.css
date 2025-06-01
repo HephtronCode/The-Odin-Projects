@@ -31,6 +31,8 @@ main {
     /* border: 1px solid #fff; */
     padding: 10px;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 2px;
 }
 .nav {
     display: flex;
@@ -57,6 +59,11 @@ main {
     text-decoration: none;
 }
 
+.nav a:hover {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;    
+}
+
 .hero {
     display: flex;
     align-items: center;
@@ -66,6 +73,12 @@ main {
     color: #fff;
     padding: 40px 20px;
     gap: 40px; /* space between image and text */
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .hero img {
@@ -96,13 +109,18 @@ main {
     font-size: 48px;
     font-weight: 900;
     color: #f9faf8;
-    margin: 0 0 10px 0;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 1px;
 }
 
 .hero-text p {
     font-size: 1.2rem;
     color: #e5e7eb;
     margin: 0;
+    max-width: 90%;
+    text-align: left;
+    letter-spacing: 0.5px;
 }
 
 .hero-text .cta-btn {
@@ -155,4 +173,145 @@ main {
 
 .btn:hover {
     background-color: #2563eb;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f3f4f6;
+    height: 60vh;
+}
+
+.product img {
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+.product h2 {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #4b5563;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.product-item {
+    padding: 0;
+    text-align: center;
+    width: 250px;
+    transition: ease-in-out 0.3s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+.product-item p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 10px 0;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #e5e7eb;
+    height: 60vh;
+    flex-wrap: wrap;
+}
+
+.quote-text {
+    font-size: 36px;
+    font-weight: lighter;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.quote-author {
+    font-size: 20px;
+    font-weight: 900;
+    color: #374151;
+    margin-left: 40px;
+}
+
+.call-to-action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #3882f6;
+    /* height: 60vh; */
+    max-width: 80%;
+    margin: 60px auto;
+    border-radius: 12px;
+}
+
+.call-to-action h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.call-to-action p {
+    font-size: 1rem;
+    color: #f9faf8;
+    text-align: left;
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+    width: 60%;
+}
+
+.cta-btn {
+    color: #fff;
+    background-color: #3882f6;
+    padding: 12px 32px;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline;
+}
+
+footer{
+    background-color: #1f2937;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
